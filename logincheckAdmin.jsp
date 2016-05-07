@@ -54,7 +54,7 @@ pageEncoding="UTF-8" import = "java.util.*" import = "java.sql.*" %>
 			if(rs.getString(4).equals(password)) { 
 				
 				session.setAttribute("username",username);
-	            response.sendRedirect("Home.jsp");
+	            response.sendRedirect("Admin.jsp");
 	            
 	            
 	            out.println("it worrrked");
