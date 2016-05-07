@@ -17,18 +17,20 @@
 <title>Question Page</title>
 </head>
 
+<h1>Ask a question!</h1>
+
 <body>
 	<!-- jsp code start -->
 	<%
 		//LoadmySQLdriver
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		//Connect to the local database
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "WeHearKK290");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "Omsairam16!");
 		//Create query & run it
 		Statement stmt = conn.createStatement(); //object for executing a static SQL statement
 
 		//get question from form
-		String question = "";
+		String question="";
 		if (request.getParameter("Question") != null) {
 			question = request.getParameter("Question");
 			//System.out.println(question);
@@ -52,11 +54,11 @@
 		}
 		
 		//placeholder for answer
-		String answer = "whats up";
+		String answer = "This question does not have an answer yet.";
 
 		//add question to db
 		int j = 0;
-		if (request.getParameter("Question") != null) {
+		if (!question.equals("")) {
 			questions = questions * random;
 			try {
 			forum_id = forum_id * random;
@@ -66,10 +68,10 @@
 				System.out.println("Looks like an error. Try again");
 			}
 		}
-		if (j > 0) {
-			System.out.println("done");
+		if (j > 0 && !question.equals("")) {
+			out.println("Your question has been successfully posted!");
 		} else {
-			System.out.println("nope");
+			out.println("Please input question your question below!");
 		}
 	%>
 	<!-- jsp code stop -->

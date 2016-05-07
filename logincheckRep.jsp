@@ -35,7 +35,7 @@ pageEncoding="UTF-8" import = "java.util.*" import = "java.sql.*" %>
 		}
 		
 		try {
-		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "WeHearKK290");
+		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "Omsairam16!");
 		
 		} catch (SQLException e) {
 		// TODO Auto-generated catch block
@@ -54,7 +54,7 @@ pageEncoding="UTF-8" import = "java.util.*" import = "java.sql.*" %>
 			if(rs.getString(4).equals(password)) { 
 				
 				session.setAttribute("username",username);
-	            response.sendRedirect("Home.jsp");
+	            response.sendRedirect("Rep.jsp");
 	            
 	            
 	            out.println("it worrrked");

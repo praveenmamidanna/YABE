@@ -52,7 +52,7 @@ Amount you would like to bid <input type="text" name="bid_price" required /><br/
 		}
 		
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "WeHearKK290");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "Omsairam16!");
 		
 		} catch (SQLException e) {
 			e.printStackTrace();

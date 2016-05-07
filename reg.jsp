@@ -59,7 +59,7 @@ catch (Exception e){
 	}
 	
 	try {
-	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "WeHearKK290");
+	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/proj2016?autoReconnect=true", "root", "Omsairam16!");
 	
 	} catch (SQLException e) {
 	// TODO Auto-generated catch block
